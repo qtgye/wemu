@@ -21,6 +21,7 @@ $icons: (
 	padding: 20px $page-margin-mobile;
 
 	&__content {
+		@include container;
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
@@ -99,6 +100,10 @@ $icons: (
 	&__primary {
 		padding: 30px $page-margin-mobile;
 
+		@include from(large) {
+			padding: 10px $page-margin-mobile;
+		}
+
 		&__item {
 			@include font-primary;
 			display: block;
@@ -147,6 +152,11 @@ $icons: (
 		padding: 10px $page-margin-mobile 30px;
 		background-color: $color-light-gray-1;
 
+		@include from(large) {
+			background-color: transparent;
+			padding: 10px 0;
+		}
+
 		&--small {
 			@include from(large) {
 				display: none;
@@ -156,10 +166,9 @@ $icons: (
 		&--large {
 			display: none;
 			position: absolute;
-			top: calc(100% - 30px);
+			top: calc(100% - 10px);
 			left: 50%;
 			width: 100%;
-			border-radius: 18px;
 			filter: drop-shadow(0 0 8px #{rgba($color-black, .1)});
 
 			@include from(large) {
@@ -181,7 +190,7 @@ $icons: (
 				width: 20px;
 				height: 20px;
 				position: absolute;
-				top: -10px;
+				top: 0;
 				left: 50%;
 				transform: translateX(-50%) rotate(45deg);
 				background-color: $color-light-gray-1;
@@ -200,6 +209,14 @@ $icons: (
 			}
 		}
 
+		&__items {
+			@include from(large) {
+				background-color: $color-light-gray-1;
+				border-radius: 18px;
+				padding: 10px;
+			}
+		}
+
 		&__item {
 			@include font-primary;
 			position: relative;
@@ -211,6 +228,7 @@ $icons: (
 
 			@include from(large) {
 				font-size: 24px;
+				padding: 0;
 			}
 
 			// Nav item icon
