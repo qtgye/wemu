@@ -1,13 +1,13 @@
 button,
 .button {
+	@include font-primary-bold;
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	border-radius: 24px;
 	min-width: 100px;
 	min-height: 36px;
-	color: var(--color-dark-gray);
-	font-family: var(--font-primary-bold);
+	color: $color-dark-gray-1;
 	font-size: 12px;
 	line-height: 1;
 	border-width: 1px;
@@ -31,10 +31,10 @@ button,
 
 .button--dark-gray {
 	color: white;
-	background-color: var(--color-dark-gray);
-	border-color: var(--color-dark-gray);
+	background-color: $color-dark-gray-1;
+	border-color: $color-dark-gray-1;
 }
 .button--dark-gray.button--outline {
-	color: var(--color-dark-gray);
+	color: $color-dark-gray-1;
 	background-color: transparent;
 }

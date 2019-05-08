@@ -10,3 +10,16 @@
        url("/assets/fonts/Oxygen-Bold.otf") format("otf");
  font-weight: bold;
 }
+
+
+/**
+ * MIXINS
+ */
+
+ @mixin font-primary {
+ 	font-family: "Oxygen", sans-serif;
+ }
+
+ @mixin font-primary-bold {
+ 	font-family: "Oxygen-Bold", sans-serif;
+ }
