@@ -1,0 +1,12 @@
+@font-face {
+  font-family: "Oxygen";
+  src: url("/assets/fonts/Oxygen.woff") format("woff"),
+       url("/assets/fonts/Oxygen.otf") format("otf");
+}
+
+@font-face {
+  font-family: "Oxygen-Bold";
+  src: url("/assets/fonts/Oxygen-Bold.woff") format("woff"),
+       url("/assets/fonts/Oxygen-Bold.otf") format("otf");
+ font-weight: bold;
+}

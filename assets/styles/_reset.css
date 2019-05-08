@@ -1,0 +1,25 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font-family: var(--font-primary);
+	-webkit-font-smoothing: antialiased;
+}
+
+:focus {
+	outline: 0;
+}
+
+a:link,
+a:visited,
+a:active {
+	text-decoration: none;
+}
+
+a:link:hover,
+a:visited:hover,
+a:active:hover {
+	text-decoration: none;
+}

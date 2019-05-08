@@ -1,0 +1,21 @@
+:root {
+
+	/* LAYOUTS */
+	--breakpoint-small: 320px;
+	--breakpoint-large: 1024px;
+	--container-max: 2500px;
+
+	/* SPACING */
+	--page-margin-mobile: 10px;
+
+	/* FONT SETTINGS */
+	--font-primary: 'Oxygen', sans-serif;
+	--font-primary-bold: 'Oxygen-Bold', sans-serif;
+
+	/* COLORS */
+	--color-black: #000;
+	--color-gray: #9B9B9B;
+	--color-dark-gray-1: #4A4A4A;
+	--color-light-gray-1: #F9F9F9;
+	--color-white: #FFF;
+}
