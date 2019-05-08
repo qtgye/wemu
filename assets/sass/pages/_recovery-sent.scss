@@ -1,0 +1,25 @@
+.page--recovery-sent {
+	min-height: 100vh;
+}
+
+.recovery-sent {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+	min-height: 100vh;
+	padding: 20px;
+
+	&__content {
+		width: 100%;
+		max-width: 600px;
+		text-align: center;
+	}
+
+	.button {
+		margin-top: 50px;
+		display: inline-flex;
+		margin-left: auto;
+		margin-right: auto;
+	}
+}
