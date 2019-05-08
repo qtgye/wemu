@@ -1,0 +1,36 @@
+form {
+	button {
+		padding: 0 15px;
+	}
+}
+
+.form-copy {
+	@include font-primary;
+	font-size: 24px;
+	text-align: center;
+	margin-bottom: 56px;
+}
+
+.input-block {
+	width: 100%;
+
+	label {
+		@include font-primary;
+		display: block;
+		font-size: 14px;
+		line-height: 31px;
+		letter-spacing: 1.17px;
+		color: $color-gray;
+	}
+
+	input {
+		display: block;
+		width: 100%;
+		padding: 0 20px;
+		height: 54px;
+		border-radius: 27px;
+		-webkit-appearance: none;
+		border: 1px solid $color-light-gray-2;
+		font-size: 16px;
+	}
+}

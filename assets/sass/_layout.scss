@@ -1,5 +1,19 @@
 $page-margin-mobile: 10px;
 
+html,
+body,
+.main {
+	min-height: 100vh;
+}
+
+.body >:first-child {
+	padding-top: 70px;
+
+	@include from(large) {
+		padding-top: 80px;
+	}
+}
+
 /**
  * MIXINS
  */

@@ -13,9 +13,11 @@ button,
 	border-width: 1px;
 	border-style: solid;
 	border-color: transparent;
-	-webkit-appearance: none;
 	cursor: pointer;
 	background-color: transparent;
+	-webkit-appearance: none;
+	transition: background-color .3s,
+							border-color .3s;
 }
 
 .button--text {
@@ -30,11 +32,22 @@ button,
 /* COLOR VARIATIONS */
 
 .button--dark-gray {
-	color: white;
+	color: $color-white;
 	background-color: $color-dark-gray-1;
 	border-color: $color-dark-gray-1;
+
+	&.button--outline {
+		color: $color-dark-gray-1;
+		background-color: transparent;
+	}
 }
-.button--dark-gray.button--outline {
-	color: $color-dark-gray-1;
-	background-color: transparent;
+
+.button--blue {
+	color: $color-white;
+	background-color: $color-blue-2;
+	border-color: $color-blue-2;
+
+	&:hover {
+		background-color: darken($color-blue-2, 5%);
+	}
 }
