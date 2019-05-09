@@ -1,0 +1,145 @@
+.home-section {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: flex-start;
+	position: relative;
+	min-height: 100vh;
+	padding: 140px 0;
+
+	@include from(large) {
+		min-height: 640px;
+	}
+
+	&__content {
+		@include container;
+		max-width: 760px;
+
+		@include from(medium) {
+			display: flex;
+			align-items: center;
+			width: calc(100% - 160px);
+		}
+
+		@include from(large) {
+			position: relative;
+		}
+	}
+
+	&__copy {
+		z-index: 5;
+		position: relative;
+
+		@include from(medium) {
+			margin-right: 100px;
+		}
+	}
+
+	&__heading {
+		@include font-primary-bold;
+		@include type((
+			font-size: 18px,
+			letter-spacing: .98px,
+			line-height: 22px,
+		));
+
+		@include from(medium) {
+			font-size: 24px;
+		}
+	}
+
+	&__body {
+		@include font-primary;
+		@include type((
+			font-size: 14px,
+			letter-spacing: 1px,
+			line-height: 21px,
+		));
+		margin-top: 13px;
+
+		@include from(medium) {
+			font-size: 16px;
+			margin-top: 16px;
+			padding-right: 23px;
+		}
+	}
+
+	&__image {
+		margin-top: 20px;
+
+		@include from(medium) {
+			width: 40%;
+			flex-shrink: 0;
+		}
+
+		@include from(large) {
+			width: percentage(390/760);
+			margin-right: -100px;
+		}
+
+		@include from(xlarge) {
+			margin-right: -240px;
+		}
+
+		img {
+			width: 100%;
+		}
+
+		&__small {
+			display: block;
+
+			@include from(medium) {
+				display: none;
+			}
+		}
+
+		&__large {
+			@include below(medium) {
+				display: none;
+			}
+		}
+	}
+
+	&__floater {
+		position: relative;
+		pointer-events: none;
+
+		@include from(medium) {
+			position: absolute;
+			top: 50%;
+			width: 100%;
+		}
+
+		img {
+			position: absolute;
+			width: percentage(160/280);
+			right: -8px;
+			bottom: -50px;
+
+			@include from(medium) {
+				width: percentage(800/760);
+				right: calc(100% - 80px);
+				bottom: 50%;
+				transform: translateY(50%);
+			}
+
+			@include from(large) {
+				right: 100%;
+			}
+		}
+
+		&__small {
+			display: block;
+
+			@include from(medium) {
+				display: none;
+			}
+		}
+
+		&__large {
+			@include below(medium) {
+				display: none;
+			}
+		}
+	}
+}

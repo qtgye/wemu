@@ -1,0 +1,45 @@
+<svg width="500px" height="545px" viewBox="0 0 500 545" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 51.3 (57544) - http://www.bohemiancoding.com/sketch -->
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M195.309726,2.10689823 L20.5400819,58.9527806 C6.3596493,63.5651331 -1.39681215,78.7996955 3.21554034,92.9801281 C3.84259499,94.9079743 4.68477763,96.7590661 5.72616521,98.4984052 L207.662425,435.774967 C217.104219,451.544775 235.812865,459.20132 253.601551,454.575633 L436.041589,407.134768 C449.511216,403.632189 457.591105,389.873496 454.088525,376.403869 C453.492124,374.11033 452.575185,371.912383 451.364806,369.874984 L243.708037,20.3316846 C233.820507,3.68825993 213.719278,-3.88102509 195.309726,2.10689823 Z" id="path-1"></path>
+        <filter x="-15.7%" y="-9.9%" width="129.6%" height="139.5%" filterUnits="objectBoundingBox" id="filter-2">
+            <feOffset dx="-4" dy="68" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="11" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0.690196078   0 0 0 0 0.737254902   0 0 0 0 0.811764706  0 0 0 0.9 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+        <path d="M195.133021,2.16437338 L18.648821,59.5679355 C4.46838837,64.180288 -3.28807308,79.4148504 1.32427942,93.595283 C1.78575231,95.0140568 2.36402655,96.3921406 3.05316344,97.7153816 L210.294651,495.648574 C219.775098,513.852383 241.161775,522.362002 260.557001,515.647633 L458.880034,446.990848 C472.031817,442.437876 479.00253,428.085338 474.449559,414.933555 C473.906894,413.366004 473.210776,411.855866 472.371336,410.425116 L243.646312,20.5839101 C233.806987,3.81366709 213.623119,-3.84974832 195.133021,2.16437338 Z" id="path-3"></path>
+        <filter x="-2.1%" y="-1.9%" width="104.2%" height="103.9%" filterUnits="objectBoundingBox" id="filter-4">
+            <feGaussianBlur stdDeviation="4.5" in="SourceAlpha" result="shadowBlurInner1"></feGaussianBlur>
+            <feOffset dx="4" dy="-9" in="shadowBlurInner1" result="shadowOffsetInner1"></feOffset>
+            <feComposite in="shadowOffsetInner1" in2="SourceAlpha" operator="arithmetic" k2="-1" k3="1" result="shadowInnerInner1"></feComposite>
+            <feColorMatrix values="0 0 0 0 0.0529157158   0 0 0 0 0.780160502   0 0 0 0 0.546836133  0 0 0 0.0482336957 0" type="matrix" in="shadowInnerInner1" result="shadowMatrixInner1"></feColorMatrix>
+            <feGaussianBlur stdDeviation="4.5" in="SourceAlpha" result="shadowBlurInner2"></feGaussianBlur>
+            <feOffset dx="2" dy="-9" in="shadowBlurInner2" result="shadowOffsetInner2"></feOffset>
+            <feComposite in="shadowOffsetInner2" in2="SourceAlpha" operator="arithmetic" k2="-1" k3="1" result="shadowInnerInner2"></feComposite>
+            <feColorMatrix values="0 0 0 0 0.738551109   0 0 0 0 0.736292828   0 0 0 0 0.829931973  0 0 0 0.609290082 0" type="matrix" in="shadowInnerInner2" result="shadowMatrixInner2"></feColorMatrix>
+            <feGaussianBlur stdDeviation="6.5" in="SourceAlpha" result="shadowBlurInner3"></feGaussianBlur>
+            <feOffset dx="4" dy="-7" in="shadowBlurInner3" result="shadowOffsetInner3"></feOffset>
+            <feComposite in="shadowOffsetInner3" in2="SourceAlpha" operator="arithmetic" k2="-1" k3="1" result="shadowInnerInner3"></feComposite>
+            <feColorMatrix values="0 0 0 0 0.704020577   0 0 0 0 0.776018746   0 0 0 0 0.836017219  0 0 0 0.408882473 0" type="matrix" in="shadowInnerInner3" result="shadowMatrixInner3"></feColorMatrix>
+            <feMerge>
+                <feMergeNode in="shadowMatrixInner1"></feMergeNode>
+                <feMergeNode in="shadowMatrixInner2"></feMergeNode>
+                <feMergeNode in="shadowMatrixInner3"></feMergeNode>
+            </feMerge>
+        </filter>
+    </defs>
+    <g id="web" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Desktop-HD" transform="translate(-1673.000000, -1958.000000)">
+            <g id="Phone" transform="translate(1911.000000, 2217.000000) scale(-1, 1) translate(-1911.000000, -2217.000000) translate(1673.000000, 1958.000000)">
+                <g id="Shadow" fill="black" fill-opacity="1">
+                    <use filter="url(#filter-2)" xlink:href="#path-1"></use>
+                </g>
+                <g id="Mobile">
+                    <use fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-3"></use>
+                    <use fill="black" fill-opacity="1" filter="url(#filter-4)" xlink:href="#path-3"></use>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
