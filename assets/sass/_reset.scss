@@ -7,6 +7,7 @@
 body {
 	@include font-primary;
 	-webkit-font-smoothing: antialiased;
+	color: $color-dark-gray-1;
 }
 
 :focus {

@@ -1,16 +1,21 @@
-$page-margin-mobile: 10px;
+$page-margin-mobile: 20px;
 
-html,
-body,
 .main {
 	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
 }
 
-.body >:first-child {
-	padding-top: 70px;
+.body {
+	flex-grow: 1;
 
-	@include from(large) {
-		padding-top: 80px;
+	>:first-child {
+		padding-top: 70px;
+
+		@include from(large) {
+			padding-top: 80px;
+		}
 	}
 }
 
@@ -20,6 +25,11 @@ body,
 
  @mixin container {
  	max-width: 1500px;
- 	margin-left: auto;
- 	margin-right: auto;
+ 	margin-left: $page-margin-mobile;
+ 	margin-right: $page-margin-mobile;
+
+ 	@include from(xlarge) {
+ 		margin-left: auto;
+ 		margin-right: auto;
+ 	}
  }

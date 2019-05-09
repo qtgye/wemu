@@ -1,3 +1,11 @@
+/**
+ * FUNCTIONS
+ */
+
+@function em($ratio) {
+	@return #{($ratio)}em;
+}
+
 a {
 	color: $color-blue;
 }
