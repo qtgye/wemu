@@ -29,10 +29,6 @@
 	&__copy {
 		z-index: 5;
 		position: relative;
-
-		@include from(medium) {
-			margin-right: 100px;
-		}
 	}
 
 	&__heading {
@@ -139,6 +135,18 @@
 		&__large {
 			@include below(medium) {
 				display: none;
+			}
+		}
+	}
+}
+
+// HOMEPAGE SECTION A
+
+.home-section-a {
+	.home-section {
+		&__copy {
+			@include from(medium) {
+				margin-right: 100px;
 			}
 		}
 	}
