@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "styles": "node-sass --output-style=compressed assets/sass/main.scss assets/styles/main.css --watch='assets/sass/**/*.scss'",
-    "serve": "browser-sync start --server --files='**/*.*'",
+    "serve": "browser-sync start --server -f '*.html' 'assets/images/*.*' 'assets/fonts/*.*' 'assets/scripts/*.*' 'assets/styles/*.*'",
     "start": "concurrently 'npm run styles' 'npm run serve'"
   },
   "repository": {
