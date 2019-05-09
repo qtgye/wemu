@@ -19,6 +19,7 @@ $icons: (
 	right: 0;
 	transition: transform .3s ease;
 	padding: $page-margin-mobile 0;
+	z-index: 9999999;
 
 	&__content {
 		@include container;

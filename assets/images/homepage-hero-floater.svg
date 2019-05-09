@@ -1,0 +1,49 @@
+<svg width="881px" height="927px" viewBox="0 0 881 927" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 51.3 (57544) - http://www.bohemiancoding.com/sketch -->
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <filter x="-24.4%" y="-102.7%" width="148.7%" height="305.5%" filterUnits="objectBoundingBox" id="filter-1">
+            <feGaussianBlur stdDeviation="50" in="SourceGraphic"></feGaussianBlur>
+        </filter>
+        <rect id="path-2" x="0" y="0" width="461" height="640" rx="50.2199973"></rect>
+        <filter x="-6.3%" y="-3.9%" width="112.6%" height="109.1%" filterUnits="objectBoundingBox" id="filter-3">
+            <feOffset dx="0" dy="4" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="9" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.04 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+        <filter x="-4.9%" y="-2.9%" width="109.8%" height="107.0%" filterUnits="objectBoundingBox" id="filter-4">
+            <feGaussianBlur stdDeviation="4.5" in="SourceAlpha" result="shadowBlurInner1"></feGaussianBlur>
+            <feOffset dx="0" dy="0" in="shadowBlurInner1" result="shadowOffsetInner1"></feOffset>
+            <feComposite in="shadowOffsetInner1" in2="SourceAlpha" operator="arithmetic" k2="-1" k3="1" result="shadowInnerInner1"></feComposite>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.12 0" type="matrix" in="shadowInnerInner1" result="shadowMatrixInner1"></feColorMatrix>
+            <feGaussianBlur stdDeviation="1" in="SourceAlpha" result="shadowBlurInner2"></feGaussianBlur>
+            <feOffset dx="0" dy="0" in="shadowBlurInner2" result="shadowOffsetInner2"></feOffset>
+            <feComposite in="shadowOffsetInner2" in2="SourceAlpha" operator="arithmetic" k2="-1" k3="1" result="shadowInnerInner2"></feComposite>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.06 0" type="matrix" in="shadowInnerInner2" result="shadowMatrixInner2"></feColorMatrix>
+            <feMerge>
+                <feMergeNode in="shadowMatrixInner1"></feMergeNode>
+                <feMergeNode in="shadowMatrixInner2"></feMergeNode>
+            </feMerge>
+        </filter>
+    </defs>
+    <g id="web" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Desktop-HD" transform="translate(-1387.000000, -197.000000)">
+            <g id="Group-3" transform="translate(1473.773972, 192.378129)">
+                <path d="M291.271817,696.88779 C127.53857,696.48697 -3,688.951603 -3,679.714602 C-3,674.153325 63.4768388,671.164027 122.555646,645.670664 C97.9336869,629.601858 83.5136898,613.27654 83.5136898,602.475512 C83.5136898,574.139488 182.682618,551.168602 305.01369,551.168602 C427.344762,551.168602 526.51369,574.139488 526.51369,602.475512 C526.51369,617.639312 498.136036,643.691468 453.005348,664.635779 C548.362548,667.557473 613,673.214747 613,679.714602 C613,688.947984 482.563715,696.481064 318.920649,696.887316 C314.34692,697.072935 309.735566,697.168602 305.090709,697.168602 C300.44981,697.168602 295.842136,697.073098 291.271845,696.887791 Z" id="Shadow" fill="#9CACC2" filter="url(#filter-1)" transform="translate(305.000000, 624.168602) rotate(29.000000) translate(-305.000000, -624.168602) "></path>
+                <g id="body" transform="translate(436.844883, 393.000000) rotate(30.000000) translate(-436.844883, -393.000000) translate(206.344883, 73.000000)">
+                    <g id="iPad">
+                        <use fill="black" fill-opacity="1" filter="url(#filter-3)" xlink:href="#path-2"></use>
+                        <use fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-2"></use>
+                        <use fill="black" fill-opacity="1" filter="url(#filter-4)" xlink:href="#path-2"></use>
+                    </g>
+                    <g id="home/light" transform="translate(216.726714, 603.521216)" fill="#EDEDED">
+                        <circle cx="13.5674993" cy="13.5674993" r="13.5674993"></circle>
+                    </g>
+                    <g id="camera/light" transform="translate(226.449033, 21.076631)" fill="#EDEDED">
+                        <circle cx="3.88799979" cy="3.88799979" r="3.88799979"></circle>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
