@@ -5,6 +5,7 @@ $page-margin-mobile: 20px;
 	display: flex;
 	flex-direction: column;
 	justify-content: flex-start;
+	overflow: hidden;
 }
 
 .body {
@@ -25,10 +26,12 @@ $page-margin-mobile: 20px;
 
  @mixin container {
  	max-width: 1500px;
- 	margin-left: $page-margin-mobile;
- 	margin-right: $page-margin-mobile;
+ 	width: calc(100% - #{$page-margin-mobile * 2});
+ 	margin-left: auto;
+ 	margin-right: auto;
 
  	@include from(xlarge) {
+ 		width: auto;
  		margin-left: auto;
  		margin-right: auto;
  	}
