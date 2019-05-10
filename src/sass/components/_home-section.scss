@@ -203,8 +203,18 @@
 			@include from(large) {
 				order: 1;
 				width: percentage(347/800);
-				margin-right: percentage(100/800);
 				margin-left: percentage(-80/800);
+				margin-right: percentage(100/800);
+			}
+
+			@include from(xlarge) {
+				margin-left: percentage(-100/800);
+				margin-right: percentage(80/800);
+			}
+
+			@include from(xxxlarge) {
+				margin-left: percentage(-360/800);
+				margin-right: percentage(137/800);
 			}
 		}
 
