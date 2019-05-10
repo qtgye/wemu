@@ -8,11 +8,13 @@
 	padding: 20px 0;
 
 	@include from(medium) {
-		padding: 140px 0;
+		min-height: 600px;
+		padding: 50px 0;
 	}
 
 	@include from(large) {
 		min-height: 640px;
+		padding: 100px 0;
 	}
 
 	&__content {
@@ -191,16 +193,23 @@
 // HOMEPAGE SECTION B
 
 .home-section-b {
+	margin-bottom: 30px;
+
 	.home-section {
 		&__copy {
 			@include from(medium) {
+				order: 2;
+				margin-right: 0;
+			}
+
+			@include from(large) {
 				order: 2;
 				margin-right: percentage(96/800);
 			}
 		}
 
 		&__image {
-			@include from(large) {
+			@include from(medium) {
 				order: 1;
 				width: percentage(347/800);
 				margin-left: percentage(-80/800);
@@ -219,11 +228,66 @@
 		}
 
 		&__floater {
-			@include from(large) {
+			@include from(medium) {
 				order: 3;
 				width: percentage(476/800);
 				right: unset;
 				left: calc(100% - 80px);
+			}
+
+			img {
+				width: percentage(250/280);
+				transform: translateY(-55%);
+				right: percentage(-8/280);
+
+				@include from(medium) {
+					width: 100%;
+					right: auto;
+					tranform: none;
+				}
+			}
+		}
+	}
+}
+
+// HOMEPAGE SECTION C
+
+.home-section-c {
+	.home-section {
+		&__copy {
+			@include from(medium) {
+				margin-right: percentage(96/800);
+			}
+
+			@include from(xxxlarge) {
+				margin-left: percentage(188/800);
+				margin-right: percentage(126/800);
+			}
+		}
+
+		&__image {
+			@include from(medium) {
+				width: percentage(313/800);
+				margin-right: percentage(-80/800);
+			}
+
+			@include from(xlarge) {
+				margin-right: percentage(-100/800);
+			}
+
+			@include from(xxxlarge) {
+				margin-right: percentage(-330/800);
+			}
+		}
+
+		&__floater {
+			@include from(medium) {
+				width: percentage(476/800);
+				right: calc(100% - #{percentage(200/800)});
+			}
+
+			@include from(large) {
+				right: calc(100% - #{percentage(100/800)});
 			}
 
 			img {
