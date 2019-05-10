@@ -1,3 +1,4 @@
+require('colors');
 const path = require('path');
 const fs = require('fs-extra');
 const chokidar = require('chokidar');
@@ -25,7 +26,7 @@ function compileSingle(fileName) {
 		const html = template.render({});
 		const outputFilePath = path.resolve(PUBLIC_ROOT, fileName.replace(/twig$/, 'html'));
 		fs.outputFileSync(outputFilePath, html);
-		console.log(`Compiled ${fileName}`);
+		console.log(`Compiled ${outputFilePath}`.green);
 	}
 	catch (err) {
 		throw err;
@@ -34,14 +35,14 @@ function compileSingle(fileName) {
 
 // COMPILE FROM PAGES
 function compile() {
-	initializeTwing();
-
-	fs.readdir(PAGES_ROOT, (err, files) => {
-		if ( err ) {
-			throw err;
-		}
+	try {
+		initializeTwing();
+		const files = fs.readdirSync(PAGES_ROOT);
 		files.forEach(file => compileSingle(file));
-	});
+	}
+	catch (err) {
+		throw err;
+	}
 }
 
 function watch() {

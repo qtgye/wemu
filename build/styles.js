@@ -1,3 +1,4 @@
+require('colors');
 const fs = require('fs-extra');
 const path = require('path');
 const sass = require('node-sass');
@@ -22,6 +23,8 @@ function compile() {
 
 		// Write CSS
 		fs.outputFileSync(OUTPUT_FILE, css);
+
+		console.log(`Compiled ${OUTPUT_FILE}`.green);
 	}
 	catch (err) {
 		throw err;
