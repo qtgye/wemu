@@ -1,7 +1,4 @@
-export default class Component {
-	static selector = '';
-	static instances = [];
-
+class Component {
 	constructor(element) {
 		this.element = element;
 	}
@@ -27,3 +24,8 @@ export default class Component {
 		}
 	}
 }
+
+Component.selector = '';
+Component.instances = [];
+
+export default Component

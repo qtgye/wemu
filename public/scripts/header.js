@@ -1,8 +1,6 @@
 import Component from './component.js';
 
-export default class Header extends Component {
-	static selector = '.header'
-
+class Header extends Component {
 	constructor(element) {
 		super(element);
 
@@ -11,7 +9,11 @@ export default class Header extends Component {
 	}
 
 	init() {
-		this.toggle.addEventListener('click', e => this.handleToggleClick(e));
+		const _this = this;
+
+		this.toggle.addEventListener('click', function(e) {
+			_this.handleToggleClick(e);
+		});
 	}
 
 	handleToggleClick(e) {
@@ -19,3 +21,7 @@ export default class Header extends Component {
 		this.element.classList.toggle('header--expanded');
 	}
 }
+
+Header.selector = '.header';
+
+export default Header;
