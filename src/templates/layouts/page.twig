@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>{% block title %}{% endblock %}</title>
+	<link rel="stylesheet" href="/styles/main.css">
+</head>
+<body class="{% block body_class %}{% endblock %}">
+	<div class="main">
+
+		{# HEADER #}
+		{% include '@templates/components/header.twig' %}
+
+		{# CONTENT #}
+		<div class="body">
+			{% block body %}{% endblock %}
+		</div>
+
+		{# FOOTER #}
+		{% include '@templates/components/footer.twig' %}
+
+	</div>
+</body>
+</html>

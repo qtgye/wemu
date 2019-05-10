@@ -1,0 +1,10 @@
+{% extends '@templates/layouts/page.twig' %}
+
+{% block title %}Home{% endblock %}
+{% block body_class %}page--test{% endblock %}
+
+{% block body %}
+	{% include '@templates/components/home-hero.twig' %}
+	{% include '@templates/components/home-section-a.twig' %}
+	{% include '@templates/components/home-section-b.twig' %}
+{% endblock %}
