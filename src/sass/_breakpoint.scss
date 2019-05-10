@@ -30,13 +30,13 @@ $breakpoints: (
  */
 
 @mixin from($breakpoint-name) {
-	@media (min-width: get-breakpoint($breakpoint-name)) {
+	@media screen and (min-width: get-breakpoint($breakpoint-name)) {
 		@content;
 	}
 }
 
 @mixin below($breakpoint-name) {
-	@media (max-width: (get-breakpoint($breakpoint-name) - 1px)) {
+	@media screen and (max-width: (get-breakpoint($breakpoint-name) - 1px)) {
 		@content;
 	}
 }
