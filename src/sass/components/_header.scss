@@ -249,7 +249,7 @@ $icons: (
 			// Icon variants
 			@each $icon in $icons {
 				&--#{$icon}::before {
-					background-image: url(/assets/images/#{$icon}.svg);
+					background-image: url(/images/#{$icon}.svg);
 				}
 			}
 		}
