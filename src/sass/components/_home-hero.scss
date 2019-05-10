@@ -13,15 +13,11 @@
 
 	&__content {
 		@include container;
-		max-width: 780px;
-
-		@include from(medium) {
-			width: calc(100% - 160px);
-		}
 
 		@include from(large) {
-			width: calc(100% - 160px);
 			position: relative;
+			padding-left: 80px;
+			padding-right: 80px;
 		}
 	}
 
