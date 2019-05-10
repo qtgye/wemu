@@ -42,7 +42,9 @@ form {
 		color: $color-gray;
 	}
 
-	input:matches([type="text"], [type="email"], [type="password"]) {
+	& [type="text"],
+	& [type="email"],
+	& [type="password"] {
 		display: block;
 		width: 100%;
 		padding: 0 20px;
