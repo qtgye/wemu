@@ -29,7 +29,8 @@ function compileSingle(fileName) {
 		console.log(`Compiled ${outputFilePath}`.green);
 	}
 	catch (err) {
-		throw err;
+		console.log(err.message.red);
+		console.error(err);
 	}
 }
 
@@ -41,7 +42,8 @@ function compile() {
 		files.forEach(file => compileSingle(file));
 	}
 	catch (err) {
-		throw err;
+		console.log(err.message.red);
+		console.error(err);
 	}
 }
 

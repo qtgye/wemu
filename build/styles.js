@@ -27,7 +27,8 @@ function compile() {
 		console.log(`Compiled ${OUTPUT_FILE}`.green);
 	}
 	catch (err) {
-		throw err;
+		console.log(err.message.red);
+		console.error(err);
 	}
 }
 
