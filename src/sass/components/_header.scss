@@ -17,15 +17,28 @@ $icons: (
 	top: 0;
 	left: 0;
 	right: 0;
-	transition: transform .3s ease;
+	transition: transform .3s ease,
+							background-color .3s ease;
 	padding: $page-margin-mobile 0;
 	z-index: 9999999;
+
+	&--opaque {
+		background-color: $color-white;
+	}
+
+	&--hidden {
+		transform: translateY(-100%);
+	}
 
 	&__content {
 		@include container;
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
+
+		> * {
+			z-index: 1000000;
+		}
 	}
 
 	&__brand {
@@ -75,6 +88,10 @@ $icons: (
 	opacity: 0;
 	pointer-events: none;
 	will-change: transform;
+	background-color: $color-white;
+	z-index: 999999;
+	max-height: calc(100vh - 60px);
+	overflow: auto;
 	transform: translateY(-20px);
 	transition: visibility .3s ease,
 							opacity .3s ease,
@@ -89,6 +106,8 @@ $icons: (
 		transform: none;
 		margin-left: 44px;
 		margin-right: auto;
+		background-color: transparent;
+		overflow: visible;
 	}
 
 	.header--expanded & {
