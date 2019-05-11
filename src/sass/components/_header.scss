@@ -22,9 +22,14 @@ $icons: (
 	padding: $page-margin-mobile 0;
 	z-index: 9999999;
 
-	&--opaque,
-	&--expanded {
+	&--opaque {
 		background-color: $color-white;
+	}
+
+	&--expanded {
+		@include below(large) {
+			background-color: $color-white;
+		}
 	}
 
 	&--hidden {
