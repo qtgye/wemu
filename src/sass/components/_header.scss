@@ -22,7 +22,8 @@ $icons: (
 	padding: $page-margin-mobile 0;
 	z-index: 9999999;
 
-	&--opaque {
+	&--opaque,
+	&--expanded {
 		background-color: $color-white;
 	}
 
