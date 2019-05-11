@@ -1,0 +1,13 @@
+<div class="features-grid">
+	<div class="features-grid__content">
+		<ul class="features-grid__grid">
+			{% for item in items %}
+				<li class="features-grid__item">
+					<img src="{{ item.image }}" alt="" class="features-grid__image">
+					<h3 class="features-grid__title">{{ item.title }}</h3>
+					<p class="features-grid__description">{{ item.description|raw }}</p>
+				</li>
+			{% endfor %}
+		</ul>
+	</div>
+</div>

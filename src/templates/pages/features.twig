@@ -1,0 +1,54 @@
+{# HERO DATA #}
+{% set hero = {
+	heading: 'Features & Components',
+	copy: 'A platform to help you and your business grow!',
+} %}
+
+{# FEATURE ITEMS DATA #}
+{% set items = [
+	{
+		title: 'Dashboard',
+		image: '/images/features/Dashboard@2x.png',
+		description: 'From handling customers to staying on top of marketing, sales, employee management & everything in between, maintaining business operations can be daunting. We’re here to help you.'
+	},
+	{
+		title: 'Point of Sales',
+		image: '/images/features/POS@2x.png',
+		description: 'From handling customers to staying on top of marketing, sales, employee management & everything in between, maintaining business operations can be daunting. We’re here to help you.'
+	},
+	{
+		title: 'Products',
+		image: '/images/features/Inventory@2x.png',
+		description: 'From handling customers to staying on top of marketing, sales, employee management & everything in between, maintaining business operations can be daunting. We’re here to help you.'
+	},
+	{
+		title: 'Services',
+		image: '/images/features/Services@2x.png',
+		description: 'From handling customers to staying on top of marketing, sales, employee management & everything in between, maintaining business operations can be daunting. We’re here to help you.'
+	},
+	{
+		title: 'Invoicing',
+		image: '/images/features/Invoice@2x.png',
+		description: 'From handling customers to staying on top of marketing, sales, employee management & everything in between, maintaining business operations can be daunting. We’re here to help you.'
+	},
+	{
+		title: 'Reports',
+		image: '/images/features/Reports@2x.png',
+		description: 'From handling customers to staying on top of marketing, sales, employee management & everything in between, maintaining business operations can be daunting. We’re here to help you.'
+	},
+	{
+		title: 'Reservation',
+		image: '/images/features/Booking@2x.png',
+		description: 'From handling customers to staying on top of marketing, sales, employee management & everything in between, maintaining business operations can be daunting. We’re here to help you.'
+	},
+] %}
+
+{% extends '@templates/layouts/page.twig' %}
+
+{% block title %}Features{% endblock %}
+{% block body_class %}page--features{% endblock %}
+
+{% block body %}
+	{% include '@templates/components/page-hero.twig' with hero only %}
+	{% include '@templates/components/features-grid.twig' with { items: items } only %}
+{% endblock %}

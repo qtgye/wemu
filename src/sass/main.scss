@@ -15,9 +15,11 @@
 // BLOCKS
 @import "components/header";
 @import "components/footer";
+@import "components/page-hero";
 
 // PAGES
 @import "pages/login";
 @import "pages/forgot-password";
 @import "pages/recovery-sent";
 @import "pages/home";
+@import "pages/features";

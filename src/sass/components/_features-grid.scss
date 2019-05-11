@@ -1,0 +1,78 @@
+.features-grid {
+	&__content {
+		@include container;
+	}
+
+	&__grid {
+		padding: 40px 0;
+
+		@include from(medium) {
+			display: grid;
+			grid-template-columns: repeat(2, 1fr);
+			grid-auto-rows: 1fr;
+			grid-gap: 25px;
+		}
+
+		@include from(large) {
+			display: grid;
+			grid-template-columns: repeat(3, 1fr);
+			padding: 95px 0;
+		}
+	}
+
+	&__item {
+		@include below(medium) {
+			&:not(:first-child) {
+				margin-top: 50px;
+			}
+		}
+
+		@include from(medium) {
+			border-radius: 20px;
+			padding: 30px;
+			box-shadow: 0 1px 8px 0 rgba($color-black, 0.1);
+		}
+	}
+
+	&__image {
+		display: block;
+		width: percentage(55/280);
+
+		@include from(large) {
+			width: percentage(100/400);
+		}
+	}
+
+	&__title {
+		@include font-primary-bold;
+		@include type((
+			font-size: 16px,
+			letter-spacing: .76px,
+			line-height: 19px,
+		));
+		color: $color-black;
+		margin-top: 10px;
+
+		@include from(large) {
+			font-size: 24px;
+		}
+	}
+
+	&__description {
+		@include font-primary;
+		@include type((
+			font-size: 14px,
+			letter-spacing: 1.16px,
+			line-height: 21px,
+		));
+		margin-top: 7px;
+
+		@include from(medium) {
+			margin-top: 14px;
+		}
+
+		@include from(large) {
+			font-size: 16px;
+		}
+	}
+}
