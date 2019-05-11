@@ -2,7 +2,7 @@
 	margin-top: auto;
 	margin-bottom: 0;
 	padding: 70px 0;
-	background-color: rgba($color-black, .1);
+	background-color: $color-light-gray-1;
 
 	@include from(large) {
 		padding: 130px 0;
