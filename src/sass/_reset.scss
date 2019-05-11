@@ -18,10 +18,12 @@ a:link,
 a:visited,
 a:active {
 	text-decoration: none;
+
+	&:hover {
+		text-decoration: none;
+	}
 }
 
-a:link:hover,
-a:visited:hover,
-a:active:hover {
-	text-decoration: none;
+li {
+	list-style-type: none;
 }
