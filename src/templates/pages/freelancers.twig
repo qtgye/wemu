@@ -1,0 +1,17 @@
+{# HERO DATA #}
+{% set hero = {
+	heading: 'Wemu for Freelancers',
+	copy: 'A platform to help you and your business grow!',
+} %}
+
+{% set image = '/images/freelancers.png' %}
+
+{% embed '@templates/layouts/solution.twig' %}
+	{% block title %}{{ hero.heading }}{% endblock %}
+	{% block copy %}
+		<h3>Invoicing</h3>
+		<p>From handling customers to staying on top of marketing, sales, employee management & everything in between, maintaining business operations can be daunting. We’re here to help you.</p>
+		<h3>Customers</h3>
+		<p>From handling customers to staying on top of marketing, sales, employee management & everything in between, maintaining business operations can be daunting. We’re here to help you.</p>
+	{% endblock %}
+{% endembed %}
