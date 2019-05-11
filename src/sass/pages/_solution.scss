@@ -1,0 +1,112 @@
+.solution {
+	&__content {
+		padding: 30px 0;
+
+		@include from(large) {
+			padding: 72px 0;
+		}
+
+		@include from(xxxlarge) {
+			padding-bottom: 250px;
+		}
+	}
+
+	&__body {
+		@include container;
+
+		@include from(large) {
+			display: flex;
+		}
+	}
+
+	&__image {
+		position: relative;
+		padding-top: percentage(316/288);
+		overflow: hidden;
+
+		@include from(large) {
+			width: percentage(300/960);
+			flex-shrink: 0;
+			padding-top: 0;
+			overflow: visible;
+		}
+
+		@include from(xxxlarge) {
+			width: percentage(536/960);
+			margin-left: percentage(-324/960);
+		}
+
+		img {
+			display: block;
+			position: absolute;
+			width: 100%;
+			top: 0;
+			left: 0;
+
+			@include from(large) {
+				position: relative;
+			}
+		}
+	}
+
+	&__floater {
+		display: none;
+		
+		@include from(xxxlarge) {
+			display: block;
+			position: absolute;
+			top: percentage(581/804);
+			left: percentage(247/536);
+			width: percentage(629/536);
+			padding-top: percentage(456/536);
+			box-shadow: 0 1px 8px 0 rgba($color-black, 0.1);
+			background-color: $color-white;
+			z-index: 1;
+		}
+	}
+
+	&__copy {
+		margin-top: 60px;
+
+		@include from(large) {
+			margin-left: percentage(100/960);
+		}
+
+		@include from(xxxlarge) {
+			width: percentage(700/960);
+			margin-top: 120px;
+			margin-left: percentage(100/960);
+			margin-right: percentage(-227/960);
+		}
+
+		h3 {
+			@include font-primary-bold;
+			@include type((
+				font-size: 16px,
+				letter-spacing: .67px,
+				line-height: 19px,
+			));
+			margin-bottom: 7px;
+
+			@include from(large) {
+				font-size: 24px;
+				margin-bottom: 16px;
+			}
+		}
+
+		p {
+			@include font-primary;
+			@include type((
+				font-size: 14px,
+				letter-spacing: 1.16px,
+				line-height: 21px,
+			));
+			margin-bottom: 30px;
+
+			@include from(large) {
+				font-size: 16px;
+				margin-bottom: 60px;
+			}
+		}
+	}
+}
