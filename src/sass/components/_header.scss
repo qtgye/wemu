@@ -37,10 +37,27 @@ $icons: (
 	}
 
 	&__content {
-		@include container;
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
+		max-width: 1330px;
+		width: calc(100% - #{$page-margin-mobile * 2});
+		margin-left: auto;
+		margin-right: auto;
+
+		@include from(medium) {
+			width: calc(100% - 120px);
+		}
+
+		@include from(large) {
+			width: calc(100% - 120px);
+			margin-left: auto;
+			margin-right: auto;
+		}
+
+	 	@include from(xxxlarge) {
+	 		margin-left: percentage(536/2500);
+	 	}
 
 		> * {
 			z-index: 1000000;
@@ -128,6 +145,10 @@ $icons: (
 
 		@include from(large) {
 			padding: 10px $page-margin-mobile;
+		}
+
+		@include from(xxxlarge) {
+			padding: 10px 0;
 		}
 
 		&__item {
