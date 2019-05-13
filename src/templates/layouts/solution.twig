@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>{% block title %}{% endblock %}</title>
+	<link rel="stylesheet" href="/styles/main.css">
+</head>
+<body class="page--solution">
+	<div class="main">
+
+		{# HEADER #}
+		{% include '@templates/components/header.twig' %}
+
+		{# CONTENT #}
+		<div class="body">
+			{% block body %}
+				{% include '@templates/components/page-hero.twig' with hero only %}
+				<div class="solution__content">
+					<div class="solution__body">
+						<div class="solution__image">
+							<img src="{{ image }}" alt="">
+							<div class="solution__floater"></div>
+						</div>
+						<div class="solution__copy">
+							{% block copy %}{% endblock %}
+						</div>
+					</div>
+				</div>
+			{% endblock %}
+		</div>
+
+		{# FOOTER #}
+		{% include '@templates/components/footer.twig' %}
+
+	</div>
+
+	<script type="module" src="/scripts/index.js"></script>
+</body>
+</html>
