@@ -18,6 +18,11 @@
 			grid-template-columns: repeat(3, 1fr);
 			padding: 95px 0;
 		}
+
+		@include from(xxxlarge) {
+			margin-left: percentage(-252/960);
+			margin-right: percentage(-364/960);
+		}
 	}
 
 	&__item {
@@ -31,6 +36,10 @@
 			border-radius: 20px;
 			padding: 30px;
 			box-shadow: 0 1px 8px 0 rgba($color-black, 0.1);
+		}
+
+		@include from(xxxlarge) {
+			padding: 60px;
 		}
 	}
 
