@@ -26,12 +26,6 @@ $icons: (
 		background-color: $color-white;
 	}
 
-	&--expanded {
-		@include below(large) {
-			background-color: $color-white;
-		}
-	}
-
 	&--hidden {
 		transform: translateY(-100%);
 	}
@@ -72,13 +66,17 @@ $icons: (
 	&__nav-toggle {
 		min-width: 25px;
 
-		@include from(large) {
-			display: none;
+		&--small {
+			@include from(large) {
+				display: none;
+			}
 		}
 
-		img {
-			.header--expanded & {
-				transform: rotate(180deg);
+		&--large {
+			display: none;
+			
+			@include from(large) {
+				display: inline-block;
 			}
 		}
 	}
@@ -133,13 +131,6 @@ $icons: (
 		overflow: visible;
 	}
 
-	.header--expanded & {
-		opacity: 1;
-		visibility: visible;
-		pointer-events: auto;
-		transform: none;
-	}
-
 	&__primary {
 		padding: 30px $page-margin-mobile;
 
@@ -170,16 +161,16 @@ $icons: (
 				}
 			}
 
-			&:hover {
-				color: $color-blue;
+			// &:hover {
+			// 	color: $color-blue;
 
-				.nav__secondary--large {
-					opacity: 1;
-					visibility: visible;
-					pointer-events: auto;
-					transform: translate(-50%, 0);
-				}
-			}
+			// 	.nav__secondary--large {
+			// 		opacity: 1;
+			// 		visibility: visible;
+			// 		pointer-events: auto;
+			// 		transform: translate(-50%, 0);
+			// 	}
+			// }
 
 			&--small-only {
 				@include from(large) {
@@ -298,6 +289,57 @@ $icons: (
 					background-image: url(/images/#{$icon}.svg);
 				}
 			}
+		}
+	}
+}
+
+
+/**
+ * NAV TOGGLE SUPPORT ON TOUCH DEVICES
+ */
+body.touch {
+	.header--expanded {
+		@include below(large) {
+			background-color: $color-white;
+		}
+
+		.header__nav-toggle {
+			img {
+				.header--expanded & {
+					transform: rotate(180deg);
+				}
+			}
+		}
+
+		.nav {
+			opacity: 1;
+			visibility: visible;
+			pointer-events: auto;
+			transform: none;
+		}
+
+		.nav__secondary--large {
+			opacity: 1;
+			visibility: visible;
+			pointer-events: auto;
+			transform: translate(-50%, 0);
+		}
+	}
+}
+
+
+/**
+ * NAV HOVER SUPPORT ON NON-TOUCH DEVICES
+ */
+body:not(.touch) {
+	.nav__primary__item:hover {
+		color: $color-blue;
+
+		.nav__secondary--large {
+			opacity: 1;
+			visibility: visible;
+			pointer-events: auto;
+			transform: translate(-50%, 0);
 		}
 	}
 }
