@@ -8,14 +8,17 @@ class Header extends Component {
 		this.lastScroll = 0;
 
 		// Save references to children
-		this.toggle = element.querySelector('.header__nav-toggle');
+		[...this.toggleButtons] = element.querySelectorAll('.header__nav-toggle');
 	}
 
 	init() {
 		const _this = this;
 
-		this.toggle.addEventListener('click', function(e) {
-			_this.handleToggleClick(e);
+		// Bind all toggle buttons
+		this.toggleButtons.forEach(toggle => {
+			toggle.addEventListener('click', function(e) {
+				_this.handleToggleClick(e);
+			});
 		});
 
 		window.addEventListener('scroll', e => this.handleScroll());
